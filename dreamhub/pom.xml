@@ -35,7 +35,8 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-generator</artifactId>
-            <version>3.4.1</version>
+            <!--<version>3.4.1</version>-->
+            <version>3.5.1</version>
         </dependency>
         <!-- 页面模板引擎freemarker -->
         <dependency>
