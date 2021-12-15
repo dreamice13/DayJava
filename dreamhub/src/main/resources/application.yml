@@ -11,3 +11,6 @@ spring:
     password: root123
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**Mapper.xml
+logging:
+  level:
+    root: info
