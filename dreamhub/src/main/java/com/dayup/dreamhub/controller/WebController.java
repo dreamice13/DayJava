@@ -29,6 +29,16 @@ public class WebController {
     }
 
     /**
+     * 通过id查询
+     * @param id
+     * @return
+     */
+    @GetMapping("/getById/{id}")
+    public Object getById(@PathVariable(name = "id") String id){
+        return webService.getById(id);
+    }
+
+    /**
      * 添加web
      * @param web
      * @return
@@ -36,5 +46,25 @@ public class WebController {
     @PostMapping("/add")
     public boolean add(@RequestBody  Web web){
         return webService.save(web);
+    }
+
+    /**
+     * 更新网站
+     * @param web
+     * @return
+     */
+    @PostMapping("/update")
+    public boolean updateById(@RequestBody  Web web){
+        return webService.updateById(web);
+    }
+
+    /**
+     * 删除网站
+     * @param id
+     * @return
+     */
+    @GetMapping("remove/{id}")
+    public boolean delete(@PathVariable(name = "id") String id){
+        return webService.removeById(id);
     }
 }
